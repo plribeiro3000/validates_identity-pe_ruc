@@ -10,7 +10,7 @@ RSpec.describe ValidatesIdentity::PeRuc do
       context 'without formatting' do
         before do
           user.legal_identity = '2345678990102'
-          user.legal_identity_type = 'PA_RUCL'
+          user.legal_identity_type = 'PE_RUC_LEGAL'
           user.valid?
         end
 
@@ -22,7 +22,7 @@ RSpec.describe ValidatesIdentity::PeRuc do
       context 'with formatting' do
         before do
           user.legal_formatted_identity = '2345678990102'
-          user.legal_identity_type = 'PA_RUCL'
+          user.legal_identity_type = 'PE_RUC_LEGAL'
           user.valid?
         end
 
@@ -35,7 +35,7 @@ RSpec.describe ValidatesIdentity::PeRuc do
     context 'with an invalid value' do
       before do
         user.legal_identity = '123456'
-        user.legal_identity_type = 'PA_RUCL'
+        user.legal_identity_type = 'PE_RUC_LEGAL'
         user.valid?
       end
 
@@ -50,7 +50,7 @@ RSpec.describe ValidatesIdentity::PeRuc do
       context 'without formatting' do
         before do
           user.person_identity = '2345678990102'
-          user.person_identity_type = 'PA_RUCP'
+          user.person_identity_type = 'PE_RUC_PERSON'
           user.valid?
         end
 
@@ -62,7 +62,7 @@ RSpec.describe ValidatesIdentity::PeRuc do
       context 'with formatting' do
         before do
           user.person_formatted_identity = '2345678990102'
-          user.person_identity_type = 'PA_RUCP'
+          user.person_identity_type = 'PE_RUC_PERSON'
           user.valid?
         end
 
@@ -75,7 +75,7 @@ RSpec.describe ValidatesIdentity::PeRuc do
     context 'with an invalid value' do
       before do
         user.person_identity = '123456'
-        user.person_identity_type = 'PA_RUCP'
+        user.person_identity_type = 'PE_RUC_PERSON'
         user.valid?
       end
 
